@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+#header{
+    transition: All 0.3s ease-in-out;
+    @include flex(row, center, center);
+    margin: 5px 0 2% 0;
+    color: white;
+    .header-container{
+        padding: 1%;
+        width: 95vw;
+        background: rgb(77, 77, 77);
+        @include flex(row, space-around, center);
+        
+        nav{
+            width: 50vw;
+            ul{
+                @include flex(row, space-around, center);
+                list-style: none;
+                li{
+                    a{
+                        color: white;
+                        text-decoration: none;
+                        &:hover{
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
+.main-container{
+    @include flex(row, space-around, flex-start);
+
+
+aside{
+    @include flex(column, space-around, center);
+    height: 50vh;
+    width: 10%;
+    background: rgb(209, 209, 209);
+    
+
+}
+.container{
+    @include flex(column, space-around, flex-start);
+
+.latest-news{
+    margin-bottom: 5%;
+    width: 80vw;
+    height: 20vh;
+    @include flex(column, space-around, center);
+    background: rgb(209, 209, 209);
+    p{
+        width: 80%;
+    }
+}
+}
+.main-content{
+    @include flex(row, space-around, flex-start);
+    background: rgba(209, 209, 209, 0.282);
+    width: 80vw;
+    height: 100%;
+    .produkter{
+        @include flex(row, center, flex-start);
+        flex-wrap: wrap;
+        margin: 5%;
+        
+       .produkten{
+        @include flex(column, space-around, center);
+           width: 20%;
+           height: 500px;
+           margin: 10px;
+           border: 1px solid black;
+           padding: 0 20px;
+           background: white;
+           img{
+               width: 100%;
+           }
+
+       }
+   }
+}
+}
