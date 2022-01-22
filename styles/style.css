@@ -5,9 +5,16 @@
           box-sizing: border-box;
 }
 
-#header {
-  -webkit-transition: All 0.3s ease-in-out;
-  transition: All 0.3s ease-in-out;
+body {
+  background: #07204b44;
+}
+
+.background-img {
+  background: url(/img/clark-street-mercantile-P3pI6xzovu0-unsplash.jpg);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,14 +28,41 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 5px 0 2% 0;
+}
+
+.background-img .logo {
+  background: url(/img/logo123.png);
+  width: 60%;
+  height: 60%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: orange;
+}
+
+#header {
+  -webkit-transition: All 0.3s ease-in-out;
+  transition: All 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: white;
 }
 
 #header .header-container {
   padding: 1%;
   width: 95vw;
-  background: #4d4d4d;
+  height: 7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,6 +75,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: fixed;
+  top: 5px;
+  border-radius: 7px;
+  z-index: 100;
+}
+
+#header .header-container .logo-heading {
+  font-family: sans-serif;
 }
 
 #header .header-container nav {
@@ -63,13 +105,49 @@
   list-style: none;
 }
 
+#header .header-container nav ul li {
+  border-radius: 7px;
+  padding: 1.2rem;
+  z-index: 1;
+  position: relative;
+  background: #dd58007c;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
 #header .header-container nav ul li a {
   color: white;
+  font-family: sans-serif;
   text-decoration: none;
+  z-index: 10;
 }
 
 #header .header-container nav ul li a:hover {
-  font-size: 18px;
+  color: #9e9e9e;
+}
+
+#header .header-container .cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 3vw;
+  height: 3vh;
+}
+
+#header .header-container .cart:hover {
+  background: rgba(255, 255, 255, 0.371);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 7px;
 }
 
 .main-container {
@@ -87,7 +165,7 @@
           align-items: flex-start;
 }
 
-.main-container aside {
+.main-container .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,29 +178,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 50vh;
-  width: 10%;
-  background: #d1d1d1;
-}
-
-.main-container .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
 .main-container .container .latest-news {
   margin-bottom: 5%;
-  width: 80vw;
+  width: 95vw;
   height: 20vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -136,11 +196,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #d1d1d1;
-}
-
-.main-container .container .latest-news p {
-  width: 80%;
+  background: #dd5800b3;
+  border-radius: 7px;
 }
 
 .main-container .main-content {
@@ -151,12 +208,13 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  background: rgba(209, 209, 209, 0.282);
+  background: #dd580036;
   width: 80vw;
   height: 100%;
 }
@@ -203,5 +261,22 @@
 
 .main-container .main-content .produkter .produkten img {
   width: 100%;
+}
+
+.checkout-div {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  background: rgba(0, 0, 0, 0.344);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  z-index: -1;
+}
+
+.checkout-div .checkout {
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */

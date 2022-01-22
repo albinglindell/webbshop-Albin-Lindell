@@ -9,72 +9,112 @@
     justify-content: $justify;
     align-items: $align;
 }
+body{
+    background: #07204b44;
+}
+.background-img{
+    background: url(/img/clark-street-mercantile-P3pI6xzovu0-unsplash.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include flex(row, center, center);
+    .logo{
+        background: url(/img/logo123.png);
+        width: 60%;
+        height: 60%;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        color: orange;
+    }
+}
 #header{
     transition: All 0.3s ease-in-out;
-    @include flex(row, center, center);
-    margin: 5px 0 2% 0;
-    color: white;
+    @include flex(column, center, center);
+
+    color: rgb(255, 255, 255);
+    
     .header-container{
         padding: 1%;
         width: 95vw;
-        background: rgb(77, 77, 77);
+        height: 7rem;
         @include flex(row, space-around, center);
-        
+        position: fixed;
+            top: 5px;
+            border-radius: 7px;
+            z-index: 100;
+        .logo-heading{
+            font-family:sans-serif;
+        }
         nav{
             width: 50vw;
             ul{
                 @include flex(row, space-around, center);
                 list-style: none;
                 li{
+                    border-radius: 7px;
+                    padding: 1.2rem;
+                    z-index: 1;
+                    position: relative;
+                    background: #dd58007c;
+                    backdrop-filter: blur(4px);
+                    
+                    
                     a{
                         color: white;
+                        font-family: sans-serif;
                         text-decoration: none;
+                        z-index: 10;
                         &:hover{
-                            font-size: 18px;
+                            color: rgb(158, 158, 158)
                         }
+                       
+                        
                     }
                 }
             }
-            
+
+        }
+        .cart{
+            @include flex(row, space-around, center);
+            width: 3vw;
+            height: 3vh;
+            &:hover{
+                background: rgba(255, 255, 255, 0.371);
+                backdrop-filter: blur(4px);
+                border-radius: 7px
+            }
         }
     }
 }
+
 .main-container{
     @include flex(row, space-around, flex-start);
 
-
-aside{
-    @include flex(column, space-around, center);
-    height: 50vh;
-    width: 10%;
-    background: rgb(209, 209, 209);
-    
-
-}
 .container{
-    @include flex(column, space-around, flex-start);
+    @include flex(column, space-around, center);
 
 .latest-news{
     margin-bottom: 5%;
-    width: 80vw;
+    width: 95vw;
     height: 20vh;
     @include flex(column, space-around, center);
-    background: rgb(209, 209, 209);
-    p{
-        width: 80%;
-    }
+    background: #dd5800b3;
+    border-radius: 7px;
+
 }
 }
 .main-content{
-    @include flex(row, space-around, flex-start);
-    background: rgba(209, 209, 209, 0.282);
+    @include flex(row, center, flex-start);
+    background: #dd580036;
     width: 80vw;
     height: 100%;
     .produkter{
         @include flex(row, center, flex-start);
         flex-wrap: wrap;
         margin: 5%;
-        
+
        .produkten{
         @include flex(column, space-around, center);
            width: 20%;
@@ -89,5 +129,18 @@ aside{
 
        }
    }
+}
+}
+.checkout-div{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    transform: translateY(-100%);
+    background: rgba(0, 0, 0, 0.344);
+    backdrop-filter: blur(4px);
+    z-index: -1;
+.checkout{
+    width: 100%;
+    height: 100%;
 }
 }
