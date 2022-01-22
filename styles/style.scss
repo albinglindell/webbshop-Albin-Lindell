@@ -13,14 +13,14 @@ body{
     background: #07204b44;
 }
 .background-img{
-    background: url(/img/clark-street-mercantile-P3pI6xzovu0-unsplash.jpg);
+    background: url(./img/clark-street-mercantile-P3pI6xzovu0-unsplash.jpg);
     height: 100vh;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     @include flex(row, center, center);
     .logo{
-        background: url(/img/logo123.png);
+        background: url(./img/logo123.png);
         width: 60%;
         height: 60%;
         background-position: center;
