@@ -2,7 +2,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
 }
+
 @mixin flex($direction, $justify, $align) {
     display: flex;
     flex-direction: $direction;
@@ -11,16 +13,19 @@
 }
 body{
     background: #07204b44;
+    &::-webkit-scrollbar{
+        display: none;
+    }
 }
 .background-img{
-    background: url(./img/clark-street-mercantile-P3pI6xzovu0-unsplash.jpg);
+    background: url(/img/clark-street-mercantile-P3pI6xzovu0-unsplash.jpg);
     height: 100vh;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     @include flex(row, center, center);
     .logo{
-        background: url(./img/logo123.png);
+        background: url(/img/logo123.png);
         width: 60%;
         height: 60%;
         background-position: center;
@@ -30,7 +35,6 @@ body{
     }
 }
 #header{
-    transition: All 0.3s ease-in-out;
     @include flex(column, center, center);
 
     color: rgb(255, 255, 255);
@@ -39,7 +43,7 @@ body{
         padding: 1%;
         width: 95vw;
         height: 7rem;
-        @include flex(row, space-around, center);
+        @include flex(row, space-between, center);
         position: fixed;
             top: 5px;
             border-radius: 7px;
@@ -49,8 +53,9 @@ body{
         }
         nav{
             width: 50vw;
+            margin-right: 10%;
             ul{
-                @include flex(row, space-around, center);
+                @include flex(row, space-evenly, center);
                 list-style: none;
                 li{
                     border-radius: 7px;
@@ -139,8 +144,30 @@ body{
     background: rgba(0, 0, 0, 0.344);
     backdrop-filter: blur(4px);
     z-index: -1;
+    @include flex(column, center, center);
 .checkout{
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    overflow: scroll;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    height: 90%;
+    background: rgb(29, 29, 29);
+    @include flex(column,flex-start ,center );
+    .checkout-list-container{
+        margin-top: 5rem;
+        @include flex(row,center ,center );
+        width: 70%;
+        img{
+            width:5rem;
+            margin-right: 5%
+        }
+
+    .checkout-list-div{
+        @include flex(column,space-between ,flex-start );
+        color: white;
+        height: 100%;
+    }
+}
 }
 }

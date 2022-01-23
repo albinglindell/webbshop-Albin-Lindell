@@ -9,8 +9,12 @@ body {
   background: #07204b44;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .background-img {
-  background: url(./img/clark-street-mercantile-P3pI6xzovu0-unsplash.jpg);
+  background: url(/img/clark-street-mercantile-P3pI6xzovu0-unsplash.jpg);
   height: 100vh;
   width: 100%;
   background-size: cover;
@@ -31,7 +35,7 @@ body {
 }
 
 .background-img .logo {
-  background: url(./img/logo123.png);
+  background: url(/img/logo123.png);
   width: 60%;
   height: 60%;
   background-position: center;
@@ -41,8 +45,6 @@ body {
 }
 
 #header {
-  -webkit-transition: All 0.3s ease-in-out;
-  transition: All 0.3s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,8 +72,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -87,6 +90,7 @@ body {
 
 #header .header-container nav {
   width: 50vw;
+  margin-right: 10%;
 }
 
 #header .header-container nav ul {
@@ -97,8 +101,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -273,10 +278,83 @@ body {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .checkout-div .checkout {
-  width: 100%;
+  width: 60%;
+  overflow: scroll;
+  height: 90%;
+  background: #1d1d1d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.checkout-div .checkout::-webkit-scrollbar {
+  display: none;
+}
+
+.checkout-div .checkout .checkout-list-container {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+}
+
+.checkout-div .checkout .checkout-list-container img {
+  width: 5rem;
+  margin-right: 5%;
+}
+
+.checkout-div .checkout .checkout-list-container .checkout-list-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: white;
   height: 100%;
 }
 /*# sourceMappingURL=style.css.map */
